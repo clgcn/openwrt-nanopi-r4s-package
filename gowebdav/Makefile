@@ -4,9 +4,10 @@ PKG_NAME:=gowebdav
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
 
-PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/your-repo/gowebdav.git
-PKG_SOURCE_VERSION:=main
+# Remove PKG_SOURCE_PROTO, PKG_SOURCE_URL, and PKG_SOURCE_VERSION
+# PKG_SOURCE_PROTO:=git
+# PKG_SOURCE_URL:=https://github.com/your-repo/gowebdav.git
+# PKG_SOURCE_VERSION:=main
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
