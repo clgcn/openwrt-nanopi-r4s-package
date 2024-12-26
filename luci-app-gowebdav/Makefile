@@ -9,3 +9,4 @@ LUCI_DEPENDS:=+gowebdav
 LUCI_PKGARCH:=all
 
 include $(TOPDIR)/feeds/luci/luci.mk
+$(eval $(call BuildPackage,$(PKG_NAME)))
