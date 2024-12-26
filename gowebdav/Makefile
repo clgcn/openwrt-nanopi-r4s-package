@@ -9,12 +9,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gowebdav
-PKG_VERSION:=0.0.8
+PKG_VERSION:=0.0.1
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://codeload.github.com/sbwml/gowebdav/tar.gz/v$(PKG_VERSION)?
-PKG_HASH:=0f689c745127163d88c7743e3217ad8bf55c5adf90da6ff4ddb3896bba23b055
+PKG_SOURCE_URL:=https://codeload.github.com/clgcn/gowebdav/tar.gz/v$(PKG_VERSION)?
+PKG_HASH:=060531dc439a303351399d29f632583db026b3da34c334691e0b34ddd103a09f
 
 PKG_CONFIG_DEPENDS:= \
 	CONFIG_GOWEBDAV_COMPRESS_GOPROXY \
