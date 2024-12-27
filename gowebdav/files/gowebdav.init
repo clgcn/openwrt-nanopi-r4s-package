@@ -45,7 +45,7 @@ start() {
 	{ [ -n "${username}" ] && [ -n "${password}" ]; } && auth_arg="-user ${username} -password ${password}"
 	[ "${read_only}" -eq "1" ] && readonly_arg="-read-only"
 	{ [ "${use_https}" -eq "1" ] && [ -e "${cert_cer}" ] && [ -e "${cert_key}" ]; } && https_arg="-https-mode -https-cert-file ${cert_cer} -https-key-file ${cert_key}"
-	/usr/bin/gowebdav -dir "${root_dir}" -http "${listen_addr}:${listen_port}" ${auth_arg} ${readonly_arg} ${https_arg} &
+	/usr/bin/gowebdav -dir "${root_dir}" -port "${listen_addr}:${listen_port}" ${auth_arg} ${readonly_arg} ${https_arg} &
 }
 
 stop() {

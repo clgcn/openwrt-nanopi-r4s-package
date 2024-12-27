@@ -24,7 +24,7 @@ PKG_BUILD_DEPENDS:=golang/host
 PKG_BUILD_PARALLEL:=1
 PKG_USE_MIPS16:=0
 
-GO_PKG:=github.com/sbwml/gowebdav
+GO_PKG:=github.com/clgcn/gowebdav
 GO_PKG_LDFLAGS:=-s -w
 
 include $(INCLUDE_DIR)/package.mk
@@ -35,7 +35,7 @@ define Package/gowebdav
 	CATEGORY:=Network
 	SUBMENU:=File Transfer
 	TITLE:=A simple WebDav server written in Golang.
-	URL:=https://github.com/sbwml/gowebdav
+	URL:=https://github.com/clgcn/gowebdav
 	DEPENDS:=$(GO_ARCH_DEPENDS)
 endef
 
