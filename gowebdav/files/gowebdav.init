@@ -1,6 +1,9 @@
 #!/bin/sh /etc/rc.common
 # Copyright (C) 2021 ImmortalWrt
+. /lib/functions.sh
+. /lib/functions/procd.sh
 
+USE_PROCD=1
 START=99
 STOP=10
 
