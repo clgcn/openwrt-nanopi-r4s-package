@@ -109,9 +109,6 @@ return view.extend({
 		o.datatype = 'file';
 		o.depends('use_https', 1);
 
-		o = s.option(DummyValue,"opennewwindow",translate("<input type=\"button\" class=\"cbi-button cbi-button-apply\" value=\"Download Reg File\" onclick=\"window.open('https://raw.githubusercontent.com/1715173329/gowebdav/master/allow_http.reg')\" />"))
-		o.description = translate("Windows doesn't allow HTTP auth by default, you need to import this reg key to enable it (Reboot needed).")
-
 		return m.render();
 	}
 });
