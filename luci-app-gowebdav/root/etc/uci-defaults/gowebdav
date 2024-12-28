@@ -1,5 +1,6 @@
 #!/bin/sh
 
+[ -f "/etc/config/ucitrack" ] && {
 uci -q batch <<-EOF >/dev/null
 	delete ucitrack.@gowebdav[-1]
 	add ucitrack gowebdav
@@ -12,6 +13,7 @@ uci -q batch <<-EOF >/dev/null
 	set firewall.gowebdav.reload=1
 	commit firewall
 EOF
+}
 
-rm -f /tmp/luci-indexcache
+rm -f /tmp/luci-indexcache*
 exit 0
