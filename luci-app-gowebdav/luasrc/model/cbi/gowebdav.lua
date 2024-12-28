@@ -1,7 +1,7 @@
 -- Created By [CTCGFW]Project-OpenWrt
 -- https://github.com/project-openwrt
 
-m = Map("gowebdav", translate("GoWebDav"), translate("GoWebDav is a tiny, simple, fast WebDav server."))
+m = Map("gowebdav", translate("GoWebDav"), translate("GoWebDav is a tiny, simple, fast WevDav server."))
 
 m:section(SimpleSection).template  = "gowebdav/gowebdav_status"
 
@@ -20,23 +20,23 @@ listen_port.rmempty     = false
 
 username = s:option(Value, "username", translate("Username"))
 username.description = translate("Leave blank to disable auth.")
-username.placeholder = "user"
-username.default     = "user"
+username.placeholder = user
+username.default     = user
 username.datatype    = "string"
 
 password = s:option(Value, "password", translate("Password"))
 password.description = translate("Leave blank to disable auth.")
-password.placeholder = "pass"
-password.default     = "pass"
+password.placeholder = pass
+password.default     = pass
 password.datatype    = "string"
 password.password    = true
 
 root_dir = s:option(Value, "root_dir", translate("Root Directory"))
 root_dir.placeholder = "/mnt"
 root_dir.default     = "/mnt"
-root_dir.datatype    = "string"
+root_dir.rmempty     = false
 
-read_only = s:option(Flag, "read_only", translate("Read Only"))
+read_only = s:option(Flag, "read_only", translate("Read-Only Mode"))
 read_only.rmempty = false
 
 allow_wan = s:option(Flag, "allow_wan", translate("Allow Access From Internet"))

@@ -1,5 +1,5 @@
 <script type="text/javascript">//<![CDATA[
-	XHR.poll(1, '<%=url([[admin]], [[service]], [[gowebdav]], [[status]])%>', null,
+	XHR.poll(1, '<%=url([[admin]], [[nas]], [[gowebdav]], [[status]])%>', null,
 		function(x, data) {
 			var tb = document.getElementById('gowebdav_status');
 			if (data && tb) {

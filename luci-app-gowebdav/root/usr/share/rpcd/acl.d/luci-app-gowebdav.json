@@ -2,18 +2,10 @@
 	"luci-app-gowebdav": {
 		"description": "Grant UCI access for luci-app-gowebdav",
 		"read": {
-			"uci": [ "gowebdav" ],
-			"file": {
-				"/var/etc/gowebdav.include": [ "read" ]
-			}
+			"uci": [ "gowebdav" ]
 		},
 		"write": {
 			"uci": [ "gowebdav" ]
-		},
-		"execute": {
-			"file": {
-				"/etc/init.d/gowebdav": [ "exec" ]
-			}
 		}
 	}
 }
