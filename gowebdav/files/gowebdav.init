@@ -36,8 +36,8 @@ start_service() {
     [ "$read_only" = "1" ] && procd_append_param command -read-only
     
     if [ "$use_https" = "1" ]; then
-        [ -n "$cert_cer" ] && procd_append_param command -cert "$cert_cer"
-        [ -n "$cert_key" ] && procd_append_param command -key "$cert_key"
+        [ -n "$cert_cer" ] && procd_append_param command -https-cert-file "$cert_cer"
+        [ -n "$cert_key" ] && procd_append_param command -https-key-file "$cert_key"
     fi
 
     procd_set_param respawn
