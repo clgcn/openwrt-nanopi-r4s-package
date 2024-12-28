@@ -31,7 +31,7 @@ start_service() {
     procd_append_param command -port "$lan_addr:$listen_port"
     
     [ -n "$username" ] && procd_append_param command -user "$username"
-    [ -n "$password" ] && procd_append_param command -pass "$password"
+    [ -n "$password" ] && procd_append_param command -password "$password"
     
     [ "$read_only" = "1" ] && procd_append_param command -read-only
     
